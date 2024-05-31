@@ -3,8 +3,8 @@
 
 const h1_height = document.querySelector('h1').offsetHeight;
 const h1_top = document.querySelector('h1').offsetTop;
-
-document.querySelector('.decor').style.top = h1_height + h1_top - 30 + 'px';
+const translate = (window.innerWidth < 560) ? 20 : 30;
+document.querySelector('.top-bg .decor').style.top = h1_height + h1_top - translate + 'px';
 
 const bgs = document.querySelectorAll('[data-bg]');
 

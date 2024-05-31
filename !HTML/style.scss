@@ -41,13 +41,13 @@ a {
 h1 {
 
     font-family: Mont;
-    font-size: 56px;
+    font-size: clamp(2.25rem, 1.4545rem + 2.2727vw, 3.5rem);
     font-weight: 900;
     line-height: 72.8px;
     text-align: left;
     margin-bottom: 0;
     @media (max-width:$mob) {
-        font-size: 48px;
+      
         line-height: 1.3em;
     }
 }
@@ -202,6 +202,10 @@ section {
     padding: 40px 0;
     box-shadow: 0 8px 12px #CBCBCB29;
     background-color: white;
+    @media screen and (max-width: $mob) {
+        padding: 24px 0;
+        
+    }
 
     .nav-link {
         padding-top: 0;
@@ -220,7 +224,7 @@ section {
     background: -webkit-linear-gradient(left, $light-grey, $light-grey 60.5%, $yellow 60.5%, $yellow);
     @media (max-width:$mob) {
         background: none;
-        margin-top: 176px;
+        margin-top: 144px;
     }
     .bg-mob-yellow{
        @media (max-width:$mob) {
@@ -231,8 +235,10 @@ section {
        @media (max-width:$mob) {
         background-color: $light-grey;
         box-shadow: 0 4px 8px rgba(95, 95, 95, 0.16);
-       }     
+       }    
+       
     }
+  
 
     .decor {
 
@@ -247,6 +253,12 @@ section {
         @media (max-width:$mob) {
             width: 88%;
         }
+        &.bg-mob-white{
+            @media (max-width:$mob) {
+                background-color: white;
+            }
+            
+           } 
     }
 
     h1 {
@@ -254,16 +266,16 @@ section {
         position: relative;
         z-index: 2;
         @media (max-width:$mob) {
-            margin-top: 64px;
+            margin-top: 36px;
         }
     }
 
     .top-pic{
         @media (max-width:$mob) {
-            width: 150%;
+            width: 155%;
             object-fit: cover;
-            height: 400px;
-            object-position: -80px 0;
+            height: 220px;
+            object-position: -235px -195px;
         }
     }
 
@@ -274,7 +286,7 @@ section {
     .buttons {
         margin-bottom: 240px;
         @media (max-width:$mob) {
-            margin-bottom: 48px;
+            margin-bottom: 0;
         }
     }
 }
