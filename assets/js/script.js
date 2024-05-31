@@ -7,7 +7,15 @@ const h1_top = document.querySelector('h1').offsetTop;
 document.querySelector('.decor').style.top = h1_height + h1_top - 30 + 'px';
 
 const bgs = document.querySelectorAll('[data-bg]');
+
+
+AOS.init({
+    disable: 'mobile' 
+  });
+
+
 if (window.innerWidth < 560) {
+    console.log('mobile');
     bgs.forEach(function (el) {
         
         el.style.backgroundImage = `url(${el.dataset.bg})`;
@@ -17,9 +25,8 @@ if (window.innerWidth < 560) {
 jQuery(document).ready(function ($) {
 
 
-    AOS.init({
-        disable: 'mobile' 
-      });
+
+
 
 // CF7 forms events
 
